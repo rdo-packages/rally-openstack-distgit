@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9abe1de1_864a4b82",
+        "filename": "openstack-rally-plugins.spec",
+        "patchSetId": 7
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2018-09-04T16:05:01Z",
+      "side": 1,
+      "message": "Could we add a %check section with the unit tests here?",
+      "revId": "5ad47bd209bbf64e1ee80016af2a2bb40a2aa81d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
