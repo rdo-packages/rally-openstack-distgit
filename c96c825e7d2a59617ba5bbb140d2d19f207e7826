@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9abe1de1_a044ee1a",
+        "filename": "openstack-rally-plugins.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2018-10-24T18:40:46Z",
+      "side": 1,
+      "message": "{} instead of ()\n\n%{pyver_build}",
+      "range": {
+        "startLine": 82,
+        "startChar": 0,
+        "endLine": 82,
+        "endChar": 14
+      },
+      "revId": "c96c825e7d2a59617ba5bbb140d2d19f207e7826",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_804c4a43",
+        "filename": "openstack-rally-plugins.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2018-10-24T18:40:46Z",
+      "side": 1,
+      "message": "nit, extra blank space",
+      "range": {
+        "startLine": 90,
+        "startChar": 16,
+        "endLine": 90,
+        "endChar": 17
+      },
+      "revId": "c96c825e7d2a59617ba5bbb140d2d19f207e7826",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_c041220d",
+        "filename": "openstack-rally-plugins.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2018-10-24T18:40:46Z",
+      "side": 1,
+      "message": "This should be %{pyver_bin}",
+      "range": {
+        "startLine": 93,
+        "startChar": 0,
+        "endLine": 93,
+        "endChar": 19
+      },
+      "revId": "c96c825e7d2a59617ba5bbb140d2d19f207e7826",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
