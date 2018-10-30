@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9abe1de1_ba277611",
+        "filename": "openstack-rally-plugins.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2018-10-30T11:44:46Z",
+      "side": 1,
+      "message": "This line should be:\n\n%{pyver_bin} -m pytest tests/unit ||",
+      "range": {
+        "startLine": 93,
+        "startChar": 1,
+        "endLine": 93,
+        "endChar": 23
+      },
+      "revId": "a2be7f0e171604b8a28bb96f3aa0c34b41ded36a",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
