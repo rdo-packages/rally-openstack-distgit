@@ -47,6 +47,7 @@ Requires:       python%{pyver}-gnocchiclient
 Requires:       python%{pyver}-keystoneauth1
 Requires:       python%{pyver}-os-faults
 Requires:       python%{pyver}-osprofiler
+Requires:       python%{pyver}-barbicanclient
 Requires:       python%{pyver}-ceilometerclient
 Requires:       python%{pyver}-cinderclient
 Requires:       python%{pyver}-designateclient
