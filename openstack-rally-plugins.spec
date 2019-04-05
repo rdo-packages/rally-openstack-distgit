@@ -19,8 +19,8 @@ rally-openstack is a collection of plugins for Rally framework \
 designed for the OpenStack platform.
 
 Name:             openstack-rally-plugins
-Version:          XXX
-Release:          XXX
+Version:          1.4.0
+Release:          1%{?dist}
 Summary:          A collection of plugins for OpenStack Rally
 License:          ASL 2.0
 URL:              https://rally.readthedocs.io
@@ -99,3 +99,6 @@ Requires:       python%{pyver}-kubernetes
 %{pyver_sitelib}/%{pname}*.egg-info
 
 %changelog
+* Fri Apr 05 2019 RDO <dev@lists.rdoproject.org> 1.4.0-1
+- Update to 1.4.0
+
