@@ -67,6 +67,7 @@ Requires:       python%{pyver}-saharaclient
 Requires:       python%{pyver}-senlinclient
 Requires:       python%{pyver}-swiftclient
 Requires:       python%{pyver}-troveclient
+Requires:       python%{pyver}-watcherclient
 Requires:       python%{pyver}-zaqarclient
 Requires:       python%{pyver}-requests
 Requires:       python%{pyver}-kubernetes
