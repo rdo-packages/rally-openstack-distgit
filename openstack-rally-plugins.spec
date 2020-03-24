@@ -102,3 +102,4 @@ Requires:       python%{pyver}-kubernetes
 * Fri Apr 05 2019 RDO <dev@lists.rdoproject.org> 1.4.0-1
 - Update to 1.4.0
 
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/rally-openstack/commit/?id=ad982b111aaeb960d7790f16b58cb41be5dcf72e
