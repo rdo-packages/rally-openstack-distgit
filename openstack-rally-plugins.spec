@@ -84,3 +84,4 @@ Requires:       python2-kubernetes
 %changelog
 * Thu Dec 20 2018 Daniel Alvarez <dalvarez@redhat.com> 1.3.0-1
 - Update to 1.3.0
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/rally-openstack/commit/?id=ad982b111aaeb960d7790f16b58cb41be5dcf72e
