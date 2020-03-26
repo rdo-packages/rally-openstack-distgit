@@ -101,4 +101,3 @@ Requires:       python%{pyver}-kubernetes
 %changelog
 * Fri Apr 05 2019 RDO <dev@lists.rdoproject.org> 1.4.0-1
 - Update to 1.4.0
-
