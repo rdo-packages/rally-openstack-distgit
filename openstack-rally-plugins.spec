@@ -84,3 +84,4 @@ Requires:       python2-kubernetes
 %changelog
 * Thu Dec 20 2018 Daniel Alvarez <dalvarez@redhat.com> 1.3.0-1
 - Update to 1.3.0
+
