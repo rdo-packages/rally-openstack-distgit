@@ -1,15 +1,3 @@
-# Macros for py2/py3 compatibility
-%if 0%{?fedora} || 0%{?rhel} > 7
-%global pyver %{python3_pkgversion}
-%else
-%global pyver 2
-%endif
-
-%global pyver_bin python%{pyver}
-%global pyver_sitelib %python%{pyver}_sitelib
-%global pyver_install %py%{pyver}_install
-%global pyver_build %py%{pyver}_build
-# End of macros for py2/py3 compatibility
 
 %global pname rally_openstack
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
@@ -28,48 +16,48 @@ Source0:          https://tarballs.openstack.org/rally-openstack/rally-openstack
 BuildArch:        noarch
 
 BuildRequires:    git
-BuildRequires:    python%{pyver}-devel
-BuildRequires:    python%{pyver}-pbr
-BuildRequires:    python%{pyver}-setuptools
+BuildRequires:    python3-devel
+BuildRequires:    python3-pbr
+BuildRequires:    python3-setuptools
 BuildRequires:    openstack-macros
 
 # test dependencies
-BuildRequires:  python%{pyver}-pytest
-BuildRequires:  python%{pyver}-ddt
-BuildRequires:  python%{pyver}-mock
-BuildRequires:  python%{pyver}-dateutil
-BuildRequires:  python%{pyver}-testtools
-BuildRequires:  python%{pyver}-kubernetes
+BuildRequires:  python3-pytest
+BuildRequires:  python3-ddt
+BuildRequires:  python3-mock
+BuildRequires:  python3-dateutil
+BuildRequires:  python3-testtools
+BuildRequires:  python3-kubernetes
 
-Requires:       python%{pyver}-rally
-Requires:       python%{pyver}-boto
-Requires:       python%{pyver}-gnocchiclient
-Requires:       python%{pyver}-keystoneauth1
-Requires:       python%{pyver}-os-faults
-Requires:       python%{pyver}-osprofiler
-Requires:       python%{pyver}-barbicanclient
-Requires:       python%{pyver}-ceilometerclient
-Requires:       python%{pyver}-cinderclient
-Requires:       python%{pyver}-designateclient
-Requires:       python%{pyver}-heatclient
-Requires:       python%{pyver}-glanceclient
-Requires:       python%{pyver}-ironicclient
-Requires:       python%{pyver}-keystoneclient
-Requires:       python%{pyver}-magnumclient
-Requires:       python%{pyver}-manilaclient
-Requires:       python%{pyver}-mistralclient
-Requires:       python%{pyver}-muranoclient
-Requires:       python%{pyver}-monascaclient
-Requires:       python%{pyver}-neutronclient
-Requires:       python%{pyver}-novaclient
-Requires:       python%{pyver}-octaviaclient
-Requires:       python%{pyver}-saharaclient
-Requires:       python%{pyver}-senlinclient
-Requires:       python%{pyver}-swiftclient
-Requires:       python%{pyver}-troveclient
-Requires:       python%{pyver}-zaqarclient
-Requires:       python%{pyver}-requests
-Requires:       python%{pyver}-kubernetes
+Requires:       python3-rally
+Requires:       python3-boto
+Requires:       python3-gnocchiclient
+Requires:       python3-keystoneauth1
+Requires:       python3-os-faults
+Requires:       python3-osprofiler
+Requires:       python3-barbicanclient
+Requires:       python3-ceilometerclient
+Requires:       python3-cinderclient
+Requires:       python3-designateclient
+Requires:       python3-heatclient
+Requires:       python3-glanceclient
+Requires:       python3-ironicclient
+Requires:       python3-keystoneclient
+Requires:       python3-magnumclient
+Requires:       python3-manilaclient
+Requires:       python3-mistralclient
+Requires:       python3-muranoclient
+Requires:       python3-monascaclient
+Requires:       python3-neutronclient
+Requires:       python3-novaclient
+Requires:       python3-octaviaclient
+Requires:       python3-saharaclient
+Requires:       python3-senlinclient
+Requires:       python3-swiftclient
+Requires:       python3-troveclient
+Requires:       python3-zaqarclient
+Requires:       python3-requests
+Requires:       python3-kubernetes
 
 %description
 %{common_desc}
@@ -80,22 +68,19 @@ Requires:       python%{pyver}-kubernetes
 %py_req_cleanup
 
 %build
-%{pyver_build}
+%{py3_build}
 
 %install
-%{pyver_install}
+%{py3_install}
 
 %check
 # FIXME(chkumar246): watcherclient is not packaged in RDO
 # So currently skipping the tests
-%if %{pyver} > 2
-  export PYTHON=/usr/bin/python3
-%endif
-%{pyver_bin} -m pytest tests/unit || true
+%{__python3} -m pytest tests/unit || true
 
 %files
 %license LICENSE
-%{pyver_sitelib}/%{pname}
-%{pyver_sitelib}/%{pname}*.egg-info
+%{python3_sitelib}/%{pname}
+%{python3_sitelib}/%{pname}*.egg-info
 
 %changelog
