@@ -1,3 +1,5 @@
+%{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
+%global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
 
 %global pname rally_openstack
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
@@ -8,12 +10,22 @@ designed for the OpenStack platform.
 
 Name:             openstack-rally-plugins
 Version:          2.0.0
-Release:          1%{?dist}
+Release:          2%{?dist}
 Summary:          A collection of plugins for OpenStack Rally
 License:          ASL 2.0
 URL:              https://rally.readthedocs.io
 Source0:          https://tarballs.openstack.org/rally-openstack/rally-openstack-%{upstream_version}.tar.gz
+# Required for tarball sources verification
+%if 0%{?sources_gpg} == 1
+Source101:        https://tarballs.openstack.org/rally-openstack/rally-openstack-%{upstream_version}.tar.gz.asc
+Source102:        https://releases.openstack.org/_static/%{sources_gpg_sign}.txt
+%endif
 BuildArch:        noarch
+
+# Required for tarball sources verification
+%if 0%{?sources_gpg} == 1
+BuildRequires:  /usr/bin/gpgv2
+%endif
 
 BuildRequires:    git
 BuildRequires:    python3-devel
@@ -63,6 +75,10 @@ Requires:       python3-kubernetes
 %{common_desc}
 
 %prep
+# Required for tarball sources verification
+%if 0%{?sources_gpg} == 1
+%{gpgverify}  --keyring=%{SOURCE102} --signature=%{SOURCE101} --data=%{SOURCE0}
+%endif
 %autosetup -S git -n rally-openstack-%{upstream_version}
 
 %py_req_cleanup
@@ -84,6 +100,9 @@ Requires:       python3-kubernetes
 %{python3_sitelib}/%{pname}*.egg-info
 
 %changelog
+* Tue Oct 20 2020 Joel Capitao <jcapitao@redhat.com> 2.0.0-2
+- Enable sources tarball validation using GPG signature.
+
 * Fri Sep 25 2020 RDO <dev@lists.rdoproject.org> 2.0.0-1
 - Update to 2.0.0
 
