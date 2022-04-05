@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
+%global sources_gpg_sign 0x4c29ff0e437f3351fd82bdf47c5a3bc787dc7035
 
 %global pname rally_openstack
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
@@ -9,8 +9,8 @@ rally-openstack is a collection of plugins for Rally framework \
 designed for the OpenStack platform.
 
 Name:             openstack-rally-plugins
-Version:          XXX
-Release:          XXX
+Version:          2.2.0
+Release:          2%{?dist}
 Summary:          A collection of plugins for OpenStack Rally
 License:          ASL 2.0
 URL:              https://rally.readthedocs.io
@@ -99,3 +99,9 @@ Requires:       python3-kubernetes
 %{python3_sitelib}/%{pname}*.egg-info
 
 %changelog
+* Wed Apr 12 2023 Alfredo Moralejo <amoralej@redhat.com> 2.2.0-2
+- Remove dependency on ceilometerclient
+
+* Tue Apr 05 2022 RDO <dev@lists.rdoproject.org> 2.2.0-1
+- Update to 2.2.0
+
