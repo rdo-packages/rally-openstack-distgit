@@ -48,7 +48,6 @@ Requires:       python3-keystoneauth1
 Requires:       python3-os-faults
 Requires:       python3-osprofiler
 Requires:       python3-barbicanclient
-Requires:       python3-ceilometerclient
 Requires:       python3-cinderclient
 Requires:       python3-designateclient
 Requires:       python3-heatclient
