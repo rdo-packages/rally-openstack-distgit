@@ -3,6 +3,8 @@
 
 %global pname rally_openstack
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+# we are excluding some BRs from automatic generator
+%global excluded_brs doc8 bandit pre-commit hacking flake8-import-order
 
 %global common_desc \
 rally-openstack is a collection of plugins for Rally framework \
@@ -12,7 +14,7 @@ Name:             openstack-rally-plugins
 Version:          XXX
 Release:          XXX
 Summary:          A collection of plugins for OpenStack Rally
-License:          ASL 2.0
+License:          Apache-2.0
 URL:              https://rally.readthedocs.io
 Source0:          https://tarballs.openstack.org/rally-openstack/rally-openstack-%{upstream_version}.tar.gz
 # Required for tarball sources verification
@@ -29,46 +31,8 @@ BuildRequires:  /usr/bin/gpgv2
 
 BuildRequires:    git-core
 BuildRequires:    python3-devel
-BuildRequires:    python3-pbr
-BuildRequires:    python3-setuptools
+BuildRequires:    pyproject-rpm-macros
 BuildRequires:    openstack-macros
-
-# test dependencies
-BuildRequires:  python3-pytest
-BuildRequires:  python3-ddt
-BuildRequires:  python3-mock
-BuildRequires:  python3-dateutil
-BuildRequires:  python3-testtools
-BuildRequires:  python3-kubernetes
-
-Requires:       python3-rally
-Requires:       python3-boto
-Requires:       python3-gnocchiclient
-Requires:       python3-keystoneauth1
-Requires:       python3-os-faults
-Requires:       python3-osprofiler
-Requires:       python3-barbicanclient
-Requires:       python3-cinderclient
-Requires:       python3-designateclient
-Requires:       python3-heatclient
-Requires:       python3-glanceclient
-Requires:       python3-ironicclient
-Requires:       python3-keystoneclient
-Requires:       python3-magnumclient
-Requires:       python3-manilaclient
-Requires:       python3-mistralclient
-Requires:       python3-muranoclient
-Requires:       python3-monascaclient
-Requires:       python3-neutronclient
-Requires:       python3-novaclient
-Requires:       python3-octaviaclient
-Requires:       python3-saharaclient
-Requires:       python3-senlinclient
-Requires:       python3-swiftclient
-Requires:       python3-troveclient
-Requires:       python3-zaqarclient
-Requires:       python3-requests
-Requires:       python3-kubernetes
 
 %description
 %{common_desc}
@@ -80,22 +44,36 @@ Requires:       python3-kubernetes
 %endif
 %autosetup -S git -n rally-openstack-%{upstream_version}
 
-%py_req_cleanup
+
+sed -i /.*-c.*upper-constraints.txt.*/d tox.ini
+sed -i /^minversion.*/d tox.ini
+sed -i /^requires.*virtualenv.*/d tox.ini
+
+# Exclude some bad-known BRs
+for pkg in %{excluded_brs};do
+  for reqfile in doc/requirements.txt test-requirements.txt; do
+    if [ -f $reqfile ]; then
+      sed -i /^${pkg}.*/d $reqfile
+    fi
+  done
+done
+%generate_buildrequires
+%pyproject_buildrequires -t -e %{default_toxenv}
 
 %build
-%{py3_build}
+%pyproject_wheel
 
 %install
-%{py3_install}
+%pyproject_install
 
 %check
 # FIXME(chkumar246): watcherclient is not packaged in RDO
 # So currently skipping the tests
-%{__python3} -m pytest tests/unit || true
+%tox -e %{default_toxenv} || true
 
 %files
 %license LICENSE
 %{python3_sitelib}/%{pname}
-%{python3_sitelib}/%{pname}*.egg-info
+%{python3_sitelib}/%{pname}*.dist-info
 
 %changelog
