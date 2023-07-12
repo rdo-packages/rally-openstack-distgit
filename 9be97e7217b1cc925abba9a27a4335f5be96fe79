@@ -16,6 +16,23 @@
       "message": "we need to rebuild rally first so that it bumps to 3.4.0",
       "revId": "9be97e7217b1cc925abba9a27a4335f5be96fe79",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2a4b5b6b_ab0a631b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-07-12T14:14:01Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "9be97e7217b1cc925abba9a27a4335f5be96fe79",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
