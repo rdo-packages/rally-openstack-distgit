@@ -22,6 +22,30 @@
       },
       "revId": "9ec6b6031c6dc4373ac5d7d3f135e0f805fdd9bc",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "052bd082_a573a330",
+        "filename": "openstack-rally-plugins.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-07-13T08:19:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5d5fc3fe_14cc1d6e",
+      "range": {
+        "startLine": 58,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 4
+      },
+      "revId": "9ec6b6031c6dc4373ac5d7d3f135e0f805fdd9bc",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
