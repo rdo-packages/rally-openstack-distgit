@@ -22,6 +22,30 @@
       },
       "revId": "291f5aa6b2995ece6e4d94d683958006a3b0c124",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c6685c22_eb5d6c59",
+        "filename": "openstack-rally-plugins.spec",
+        "patchSetId": 7
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-07-13T08:42:08Z",
+      "side": 0,
+      "message": "boto was removed as dep for this package some time ago:\n\nhttps://github.com/openstack/rally-openstack/commit/e3dd2878eed7e9d9ff154b5d693cd3ed344ab418#diff-4d7c51b1efe9043e44439a949dfd92e5827321b34082903477fd04876edb7552",
+      "parentUuid": "986e65d8_511b0647",
+      "range": {
+        "startLine": 45,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 5
+      },
+      "revId": "291f5aa6b2995ece6e4d94d683958006a3b0c124",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
