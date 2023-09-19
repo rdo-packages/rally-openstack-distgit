@@ -16,6 +16,23 @@
       "message": "Waiting for \u0027python3dist(rally) \u003e\u003d 3.4\u0027",
       "revId": "8586e604e26c5750b88bfee3f13172abc18386b1",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "10f3abdf_f43d19fc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-09-19T07:42:06Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "8586e604e26c5750b88bfee3f13172abc18386b1",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
