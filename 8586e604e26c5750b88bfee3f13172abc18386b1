@@ -33,6 +33,41 @@
       "message": "recheck",
       "revId": "8586e604e26c5750b88bfee3f13172abc18386b1",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "697fbb49_c56899a0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-09-19T14:54:09Z",
+      "side": 1,
+      "message": "it now needs python3dist(os-faults) \u003e\u003d 0.2",
+      "parentUuid": "2f1b0158_5f48348c",
+      "revId": "8586e604e26c5750b88bfee3f13172abc18386b1",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7b92b297_7f9e5b88",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-09-19T14:54:09Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "8586e604e26c5750b88bfee3f13172abc18386b1",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
