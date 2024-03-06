@@ -6,7 +6,7 @@
 # we are excluding some BRs from automatic generator
 %global excluded_brs doc8 bandit pre-commit hacking flake8-import-order pytest-html sphinx openstackdocstheme
 # We are excluding some runtime requirements from automatic
-%global excluded_reqs python-watcherclient
+%global excluded_reqs python-watcherclient python-senlinclient python-muranoclient
 
 %global common_desc \
 rally-openstack is a collection of plugins for Rally framework \
