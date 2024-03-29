@@ -14,7 +14,7 @@ designed for the OpenStack platform.
 
 Name:             openstack-rally-plugins
 Version:          2.3.0
-Release:          1%{?dist}
+Release:          2%{?dist}
 Summary:          A collection of plugins for OpenStack Rally
 License:          Apache-2.0
 URL:              https://rally.readthedocs.io
@@ -85,6 +85,9 @@ done
 %{python3_sitelib}/%{pname}*.dist-info
 
 %changelog
+* Fri Mar 29 2024 RDO <dev@lists.rdoproject.org> 2.3.0-2
+- Rebuild 2.3.0 in Caracal
+
 * Fri Sep 08 2023 RDO <dev@lists.rdoproject.org> 2.3.0-1
 - Update to 2.3.0
 
