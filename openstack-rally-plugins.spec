@@ -103,3 +103,4 @@ Requires:       python3-kubernetes
 * Fri Apr 02 2021 RDO <dev@lists.rdoproject.org> 2.1.0-1
 - Update to 2.1.0
 
+# REMOVEME: error caused by commit https://opendev.org/openstack/rally-openstack/commit/48e20b5d55a0ad62fd2d5b62ef39e486c1b6e932
