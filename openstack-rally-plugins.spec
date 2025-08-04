@@ -85,3 +85,4 @@ done
 %{python3_sitelib}/%{pname}*.dist-info
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/rally-openstack/commit/48e20b5d55a0ad62fd2d5b62ef39e486c1b6e932
