@@ -44,7 +44,7 @@ BuildRequires:    openstack-macros
 %if 0%{?sources_gpg} == 1
 %{gpgverify}  --keyring=%{SOURCE102} --signature=%{SOURCE101} --data=%{SOURCE0}
 %endif
-%autosetup -S git -n rally-openstack-%{upstream_version}
+%autosetup -S git -n openstack-rally-plugins-%{upstream_version}
 
 
 sed -i /.*-c.*upper-constraints.txt.*/d tox.ini
