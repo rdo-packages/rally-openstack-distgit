@@ -1,0 +1,8 @@
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Code-Review+2: Chandan Kumar <chkumar@redhat.com>
+Workflow+1: Chandan Kumar <chkumar@redhat.com>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Tue, 07 Oct 2025 12:18:06 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/rally-openstack-distgit/+/58077
+Project: openstack/rally-openstack-distgit
+Branch: refs/heads/rpm-master
