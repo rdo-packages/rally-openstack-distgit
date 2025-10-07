@@ -16,6 +16,23 @@
       "message": "Needs rally first https://review.opendev.org/c/openstack/rally/+/962907",
       "revId": "79e601803295f7988917b84df2f0236f09f0ae88",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "60dd399c_256c7d02",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2025-10-07T11:50:15Z",
+      "side": 1,
+      "message": "recheck rally patch merged",
+      "revId": "79e601803295f7988917b84df2f0236f09f0ae88",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
